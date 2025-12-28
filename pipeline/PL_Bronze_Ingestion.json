@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Customers",
+				"name": "customers",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -65,7 +65,7 @@
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "Customers",
+						"activity": "customers",
 						"dependencyConditions": [
 							"Succeeded"
 						]
