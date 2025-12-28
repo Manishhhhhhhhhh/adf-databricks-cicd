@@ -1,0 +1,9 @@
+{
+	"name": "ecommerce-project",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "33427e7d-f72e-4ee5-b1bc-d504743d1e8e",
+		"tenantId": "3cc553a5-eec4-4b67-9863-7e488c9fa455"
+	}
+}

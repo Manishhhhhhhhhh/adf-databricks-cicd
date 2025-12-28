@@ -1,0 +1,72 @@
+{
+	"name": "orders_json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "orders.json",
+				"folderPath": "raw",
+				"fileSystem": "datalake"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"order_details": {
+					"type": "object",
+					"properties": {
+						"order_id": {
+							"type": "integer"
+						},
+						"order_date": {
+							"type": "string"
+						}
+					}
+				},
+				"customer": {
+					"type": "object",
+					"properties": {
+						"customer_id": {
+							"type": "integer"
+						}
+					}
+				},
+				"item": {
+					"type": "object",
+					"properties": {
+						"product_id": {
+							"type": "integer"
+						},
+						"quantity": {
+							"type": "integer"
+						},
+						"unit_price": {
+							"type": "number"
+						}
+					}
+				},
+				"transaction": {
+					"type": "object",
+					"properties": {
+						"total_amount": {
+							"type": "number"
+						},
+						"payment_method": {
+							"type": "string"
+						},
+						"status": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
